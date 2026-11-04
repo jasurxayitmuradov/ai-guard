@@ -17,4 +17,13 @@ class NSFWModel(BaseModel):
 
 
     def predict(self, image):
-        return self.classifier(image)
+        results = self.classifier(image)
+
+        scores = {}
+
+        for item in results:
+            key = item["label"].lower()
+            value = item["score"]
+            scores[key] = value
+        return scores
+    

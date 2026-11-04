@@ -17,7 +17,11 @@ class AIEngine:
     def analyze(self, image):
 
         scores = self.model.predict(image)
+          
 
+        if not isinstance(scores, dict):
+            raise TypeError("Model must return a dictionary")
+        
         if "nsfw" not in scores:
             raise ValueError("NSFW score is missing")
         
@@ -33,5 +37,6 @@ class AIEngine:
             label=result,
             score=nsfw_score,
             model_name=self.model_name,
-            threshold=self.threshold
+            threshold=self.threshold,
+            image_name=image
         )

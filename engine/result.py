@@ -6,3 +6,4 @@ class DetectionResult:
     score: float
     model_name: str 
     threshold: float
+    image_name: str
