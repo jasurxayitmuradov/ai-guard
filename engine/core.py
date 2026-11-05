@@ -2,7 +2,7 @@ from engine.result import DetectionResult
 
 class AIEngine:
     def __init__(self, model, threshold=0.7):
-        self.model_name = model.__class__.__name__
+        self.model_name = getattr(model, "model_name", model.__class__.__name__)
         self.model = model
         
         if not 0 <= threshold <= 1:
