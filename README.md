@@ -110,7 +110,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/jasurxayitmuradov/ai-guard.git
-cd ai-engine
+cd ai-guard
 ```
 
 Create and activate a virtual environment:
