@@ -1,7 +1,7 @@
 from fastapi import UploadFile, HTTPException
 from PIL import Image
 
-MAX_FILE_SIZE = 5*1024*1024 #5mb
+MAX_FILE_SIZE = 5*1024*1024  # 5mb
 MAX_IMAGE_WIDTH = 4096
 MAX_IMAGE_HEIGHT = 4096
 
@@ -11,9 +11,10 @@ ALLOWED_TYPES = {
     "image/webp"
 }
 
+
 def validate_image(file: UploadFile):
 
-    file.file.seek(0,2)
+    file.file.seek(0, 2)
     file_size = file.file.tell()
     file.file.seek(0)
 
@@ -22,7 +23,6 @@ def validate_image(file: UploadFile):
             status_code=413,
             detail="File size exceeds 5 MB limit"
         )
-    
 
     if file.content_type not in ALLOWED_TYPES:
         raise HTTPException(
