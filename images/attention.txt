@@ -1,0 +1,10 @@
+AI Guard Test Images
+
+This directory contains sample images used to demonstrate
+the image classification capabilities of AI Guard.
+
+- normal_image.png: An image classified as Normal.
+- nsfw_image.png: An image classified as NSFW.
+
+These images are provided strictly for educational and
+testing purposes.
