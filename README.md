@@ -1,5 +1,6 @@
 # AI Guard
 The demo video: https://youtu.be/tBBugonjtXM
+
 AI Guard is an image classification API that detects potentially Not Safe For Work (NSFW) content using a pretrained deep learning model.
 
 The project uses Hugging Face Transformers and FastAPI to analyze uploaded images and classify them as either `NSFW` or `Normal`.
