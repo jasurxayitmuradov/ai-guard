@@ -3,5 +3,5 @@ __pycache__/
 *.pyc
 .env
 .cache/
-rasmlar
-.pytest_cache
+rasmlar/
+.pytest_cache/
