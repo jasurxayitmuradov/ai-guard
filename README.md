@@ -109,7 +109,7 @@ The score and label depend on the uploaded image.
 Clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/jasurxayitmuradov/ai-guard.git
 cd ai-engine
 ```
 
